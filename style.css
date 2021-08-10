@@ -1,0 +1,415 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: arial, helvetica;
+}
+
+h1{
+  font-size: 2.6rem;
+  font-family: arial, helvetica;
+}
+
+:root{
+  font-size: 100%;
+  --primaryColor: #212121;
+  --darkColor : #000000;
+  --lightColor: #484848;
+  --fontColor: #fff;
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+img{
+  margin: 15px 0px;
+}
+
+header{
+  width: 100%;
+  height: 100px;
+  background-color: var(--primaryColor);
+  color: var(--fontColor);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+button{
+  border: 0px; 
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+input{
+  outline: none;
+  padding: 2%;
+}
+
+#form{
+  width: 40vw;
+  background-color: var(--lightColor);
+  color: var(--fontColor);
+  font-size: 1.5rem;
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 1rem;
+  margin-top: 7rem;
+}
+
+#form input{
+  width: 50%;
+  font-size: 1.3rem;
+  border-radius: 3px;
+}
+
+#form label{
+  margin-left: 4rem;
+  margin-bottom: 2rem;
+}
+
+.inputs{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.inputs label:first-child{
+  margin-top: 1.5rem
+}
+
+.inputs label{
+  width: 100%;
+}
+
+#buttons{
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 2rem;
+}
+
+#buttons > button{
+  width: 6.4rem;
+  height: 2.3rem;
+  font-size: 1.2rem;
+}
+
+#cadastros tr:first-child{
+  background-color: rgb(214, 214, 206);
+}
+
+#cadastros{
+  background-color: rgb(214, 214, 206);
+  width: 80%;
+  margin-bottom: 7rem;
+  margin-top: 7rem;
+}
+
+.table{
+  width: 100%;
+  font-size: 1.6rem;
+  border-radius: 4px;
+}
+
+table button{
+ width: 5rem;
+ height: 2rem;
+ font-size: 1.4rem;
+ margin-bottom: 1rem;
+}
+
+td{
+  text-align: center;
+}
+
+footer{
+  height: 6rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--darkColor);
+  color: var(--fontColor);
+}
+
+.sessaoPrecos{
+  margin-top: 5rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.precos{
+  width: 40vw;
+  background-color: var(--lightColor);
+  color: var(--fontColor);
+  font-size: 1.5rem;
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 0.2rem;
+}
+
+@keyframes go-back{
+  0% {transform: translateX(1000px);}
+  100% {transform: translateX(0);}
+}
+
+@keyframes back-go{
+  0% {transform: translateX(-1000px);}
+  1000% {transform: translateX(0);}
+}
+
+.none{
+  display: none;
+}
+
+.opacity{
+  opacity: 0;
+}
+
+.precos > h3{
+  padding: 1rem;
+}
+
+#precosInput{
+  width: 100%;
+  margin-left: 2rem;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+#precosInput > label:first-child{
+  margin-bottom: 2rem;
+}
+
+#precosInput > label > input{
+  font-size: 1.3rem;
+}
+
+#precosButtons{
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 2rem;
+}
+
+#precosButtons > button{
+  width: 6.4rem;
+  height: 2.3rem;
+  font-size: 1.2rem;
+  margin-bottom: 1.2rem;
+}
+
+#buttonCancelar{
+  background-color: red;
+  color: white;
+}
+
+.sessaoComprovante{
+  transition: 2s;
+  margin-top: 5rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.sessaoComprovante #dados{
+  width: 40vw;
+  background-color: var(--lightColor);
+  color: var(--fontColor);
+  font-size: 1.5rem;
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 0.2rem;
+  margin-top: 2%;
+}
+
+.sessaoComprovante div > h3{
+  padding: 1rem;
+}
+
+#dados{
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+}
+
+#dados label{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-left: 2.5rem;
+}
+
+#acaoImpressao{
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 2rem;
+}
+
+#acaoImpressao > button{
+  width: 6.4rem;
+  height: 2.3rem;
+  font-size: 1.2rem;
+  margin-bottom: 1.2rem;
+}
+
+.comprovanteSaida{
+  width: 100vw;
+  height: 100vh;
+  background-color: #00000090;
+  position: fixed;
+  top:0px;
+  left: 0px;
+  z-index: -10;
+  opacity: 0;
+  user-select: none;
+  transition: all .3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sessaoComprovanteSaida{
+  width: 40vw;
+  border-radius: 5px;
+  height: 20rem;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.sessaoComprovanteSaida label{
+  font-size: 1.3rem;
+  margin-left: 2rem;
+  margin-top: 1rem;
+}
+
+.sessaoComprovanteSaida hr{
+  background-color: #000000;
+  height: 3px;
+}
+
+.sessaoComprovanteSaida h3{
+  font-size: 1.6rem;
+  margin-top: 10px;
+  margin-left: 15px;
+  font-weight: 700;
+}
+
+.comprovanteSaida.active{
+  z-index: 5000;
+  opacity: 1;
+}
+
+@media (max-width: 400px){
+  :root{
+    font-size: 65%;
+  }
+
+  header{
+    display: flex;
+    height: auto;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #form{
+    width: 80%;
+  }
+
+  .precos{
+    width: 80%;
+  }
+
+  .table thead {
+    display: none;   
+  }
+
+  .table #tbody td:not(:first-child){
+    display: flex;
+  }
+
+  #tbody td{
+    padding-bottom: 4%;
+  }
+
+  #tbody button{
+    margin-left: 3%;
+  }
+
+  .sessaoComprovante #dados{
+    width: 80vw;
+  }
+  
+  .sessaoComprovanteSaida{
+    width: 80vw;
+    border-radius: 5px;
+    height: auto;
+    padding-bottom: 1%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+  }
+
+}
+
+@media (min-width: 400px) and (max-width: 768px){
+  :root{
+    font-size: 65%;
+  }
+
+  header{
+    display: flex;
+    height: auto;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #form{
+    width: 80%;
+  }
+
+  .precos{
+    width: 80%;
+  }
+
+  .table thead {
+    display: none;   
+  }
+
+  .table #tbody td:not(:first-child){
+    display: flex;
+  }
+
+  #tbody td{
+    padding-bottom: 4%;
+  }
+  
+  .sessaoComprovante #dados{
+    width: 80vw;
+  }
+
+  .sessaoComprovanteSaida{
+    width: 80vw;
+    border-radius: 5px;
+    height: auto;
+    padding-bottom: 1%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+  }
+
+}
+

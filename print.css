@@ -1,0 +1,36 @@
+@media print {
+  header {
+    display: none;
+  }
+
+  #form{
+    display: none;
+  }
+
+  .sessaoPrecos{
+    display: none;
+  }
+
+  #cadastros{
+    display: none;
+  }
+
+  footer{
+    display: none;
+  }
+
+  
+  #dados{
+    min-width: 70vw;
+    color: rgb(39, 38, 38);
+  }
+
+  .sessaoComprovanteSaida{
+    min-width: 70vw;
+    color: rgb(39, 38, 38);
+  }
+
+  #acaoImpressao{
+    display: none;
+  }
+}
